@@ -13,6 +13,13 @@
   transform: translateX(0.25em);
 }
 
+.row {
+  padding: 0.3em;
+  margin: 0;
+  border-radius: 5px 0 0 5px;
+  transform: translateX(0.25em);
+}
+
 .current-books {
   margin: 50px 0;
   height: 500px;
@@ -120,4 +127,25 @@ body {
   margin: auto;
   display: flex;
   flex-wrap: wrap;
+}
+.galery ul {
+  margin: 0;
+  padding: 0;
+  width: 600px;
+}
+
+.galery ul li {
+  padding: 50px 0;
+  list-style-type: none;
+  width: 48%;
+  float: left;
+  background: #f0f0f0;
+  margin: 4px 8px 4px 0;
+  text-align: center;
+}
+
+@media (min-width: 500px) {
+  .galery ul li {
+    width: 20%;
+  }
 }
