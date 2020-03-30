@@ -1,7 +1,6 @@
 {
   "name": "learn-programming-with-javascript-activity",
   "version": "1.0.0",
-  "description": "",
   "main": "index.html",
   "scripts": {
     "start": "node node_modules/live-server/live-server --port=8081"
@@ -9,6 +8,21 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "live-server": "^1.2.1"
-  }
+    "live-server": "^1.2.1",
+    "tedious": "^8.2.0"
+  },
+  "directories": {
+    "doc": "doc"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luna-Black/galerie_photo.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Luna-Black/galerie_photo/issues"
+  },
+  "homepage": "https://github.com/Luna-Black/galerie_photo#readme",
+  "description": ""
 }
