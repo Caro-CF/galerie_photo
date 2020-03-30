@@ -108,3 +108,16 @@ footer {
   transform: translate(-50%, -50%);
   color: white;
 }
+
+body {
+  margin: 0;
+  padding: 10px;
+  background: darken(whitesmoke, 10%);
+}
+#instafeed {
+  max-width:1080px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
