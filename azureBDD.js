@@ -9,9 +9,9 @@ const config = {
     },
     type: "default"
   },
-  server: "your_server.database.windows.net", // update me
+  server: "cesicfweb.database.windows.net", // update me
   options: {
-    database: "cesicfweb.database.windows.net", //update me
+    database: "cesigaleriephotos", //update me
     encrypt: true
   }
 };
@@ -28,28 +28,27 @@ connection.on("connect", err => {
 });
 
 function queryDatabase() {
-  console.log("Reading rows from the Table...");
+  console.log("Connecting...");
 
-  // Read all rows from table
-  const request = new Request(
-    `SELECT TOP 20 pc.Name as CategoryName,
-                   p.name as ProductName
-     FROM [SalesLT].[ProductCategory] pc
-     JOIN [SalesLT].[Product] p ON pc.productcategoryid = p.productcategoryid`,
-    (err, rowCount) => {
-      if (err) {
-        console.error(err.message);
-      } else {
-        console.log(`${rowCount} row(s) returned`);
-      }
-    }
-  );
+  // Show users
+const request = new Request('SELECT * FROM T_UTILISATEURS;', function(err) {
+if (err) {  
+    console.log(err);}  
+});  
 
-  request.on("row", columns => {
+var result = "";
+
+
+request.on("row", function(columns) {
     columns.forEach(column => {
-      console.log("%s\t%s", column.metadata.colName, column.value);
-    });
-  });
-
+        if (column.value === null) {  
+            console.log('NULL');  
+          } else {  
+            result+= column.value + " ";  
+          }  
+        });  
+        console.log(result);  
+        result ="";  
+});
   connection.execSql(request);
 }
